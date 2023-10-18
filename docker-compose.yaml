@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   app:
-    container_name: bitovi-streaming-examples
+    container_name: assessment-streaming-examples
     build: .
     restart: always
 
