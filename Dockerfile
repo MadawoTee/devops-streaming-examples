@@ -6,6 +6,6 @@ COPY . .
 
 COPY package.json .
 RUN npm install
-
+#stsr
 EXPOSE $PORT
 CMD npm run start
