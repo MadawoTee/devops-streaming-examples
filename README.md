@@ -1,3 +1,3 @@
 # devops-streaming-examples
-Examples for Bitovi DevOps Streaming
+Examples for Madawo Tee DevOps Streaming
 "# devops-streaming-examples" 
