@@ -48,15 +48,14 @@ jobs:
     - id: deploy
       name: Deploy
       uses: bitovi/github-actions-deploy-docker-to-ec2@v0.5.8
-      with:
-        token: ${{ secrets.MYGITHUB_TOKEN }}
+      with:       
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
         aws_default_region: eu-west-1
         domain_name: bitovi.com
         sub_domain: app
-        tf_state_bucket: my-terraform-state-bucket
+        tf_state_bucket: my-terraform-state-bucket-taona
         dot_env: ${{ secrets.DOT_ENV }}
         ghv_env: ${{ vars.VARS }}
         app_port: 30001
