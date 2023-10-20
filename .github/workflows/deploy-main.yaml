@@ -29,7 +29,7 @@
 #   # run: |
 #   #   echo "::set-output name=cache-hit::false"
 #   # if: steps.cache.outputs.cache-hit == 'true'  
-
+#....
 name: Advanced deploy
 on:
   push:
@@ -58,6 +58,6 @@ jobs:
         tf_state_bucket: my-terraform-state-bucket-taona
         dot_env: ${{ secrets.DOT_ENV }}
         ghv_env: ${{ vars.VARS }}
-        app_port: 30001
+        app_port: 3000
         additional_tags: "{\"key1\": \"value1\",\"key2\": \"value2\"}"
 # fffgggg
