@@ -60,3 +60,4 @@ jobs:
         ghv_env: ${{ vars.VARS }}
         app_port: 30001
         additional_tags: "{\"key1\": \"value1\",\"key2\": \"value2\"}"
+# fffgggg
