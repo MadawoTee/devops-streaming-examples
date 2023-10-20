@@ -47,7 +47,7 @@ jobs:
     steps:
     - id: deploy
       name: Deploy
-      uses: MadawoTee/angular-httpclient-demo-master
+      uses: MadawoTee/angular-httpclient-demo-master@git
 
       with:       
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
