@@ -28,7 +28,7 @@ jobs:
           # Uncomment this to delete the bucket used to store Terraform state files 555555
           tf_state_bucket_destroy: true
 
-  - name: Clear Cache
-  run: |
-    echo "::set-output name=cache-hit::false"
-  if: steps.cache.outputs.cache-hit == 'true'  
+  # - name: Clear Cache
+  # run: |
+  #   echo "::set-output name=cache-hit::false"
+  # if: steps.cache.outputs.cache-hit == 'true'  

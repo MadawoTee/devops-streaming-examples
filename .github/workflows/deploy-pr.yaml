@@ -23,7 +23,7 @@ jobs:
           aws_default_region: eu-west-1
           app_port: 3000
 
-  - name: Clear Cache
-  run: |
-    echo "::set-output name=cache-hit::false"
-  if: steps.cache.outputs.cache-hit == 'true'          
+  # - name: Clear Cache
+  # run: |
+  #   echo "::set-output name=cache-hit::false"
+  # if: steps.cache.outputs.cache-hit == 'true'          
