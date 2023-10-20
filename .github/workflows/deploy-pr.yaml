@@ -4,7 +4,7 @@ on:
     branches: [ main ]
     #teststtst 4444
 permissions:
-  contents: read
+  contents: write-all
 jobs:
   EC2-Deploy:
     # if the branch name of the PR does not contain 'skip-deploy'
