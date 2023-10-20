@@ -1,36 +1,6 @@
 
-# name: Deploy
+name: Deploy
 
-# on:
-#   push:
-#     branches: [ main ]
-
-# permissions:
-#   contents: write
-
-# jobs:
-#   EC2-Deploy:
-#     runs-on: ubuntu-latest
-#     environment:
-#       name: ${{ github.ref_name }}
-#       url: ${{ steps.deploy.outputs.vm_url }}
-#     steps:
-#     - id: deploy
-#       name: Deploy
-#       uses: madawotee/github-actions-deploy-docker-to-ec2@v0.5.8
-#       with:
-#         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID}}
-#         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-#         aws_default_region: eu-west-1
-#         # dot_env: ${{ secrets.DOT_ENV }}
-#         app_port: 3000
-
-#   # - name: Clear Cache
-#   # run: |
-#   #   echo "::set-output name=cache-hit::false"
-#   # if: steps.cache.outputs.cache-hit == 'true'  
-#....
-name: Advanced deploy
 on:
   push:
     branches: [ main ]
@@ -48,16 +18,46 @@ jobs:
     - id: deploy
       name: Deploy
       uses: madawotee/github-actions-deploy-docker-to-ec2@v0.5.9
-      with:       
-        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
+      with:
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
         aws_default_region: eu-west-1
-        domain_name: madawotee.com
-        sub_domain: app
-        tf_state_bucket: my-terraform-state-bucket-taona
-        dot_env: ${{ secrets.DOT_ENV }}
-        ghv_env: ${{ vars.VARS }}
+        # dot_env: ${{ secrets.DOT_ENV }}
         app_port: 3000
-        additional_tags: "{\"key1\": \"value1\",\"key2\": \"value2\"}"
-# fffgggg
+
+#   # - name: Clear Cache
+#   # run: |
+#   #   echo "::set-output name=cache-hit::false"
+#   # if: steps.cache.outputs.cache-hit == 'true'  
+#....
+# name: Advanced deploy
+# on:
+#   push:
+#     branches: [ main ]
+
+# permissions:
+#   contents: write
+
+# jobs:
+#   EC2-Deploy:
+#     runs-on: ubuntu-latest
+#     environment:
+#       name: ${{ github.ref_name }}
+#       url: ${{ steps.deploy.outputs.vm_url }}
+#     steps:
+#     - id: deploy
+#       name: Deploy
+#       uses: madawotee/github-actions-deploy-docker-to-ec2@v0.5.9
+#       with:       
+#         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
+#         aws_default_region: eu-west-1
+#         domain_name: madawotee.com
+#         sub_domain: app
+#         tf_state_bucket: my-terraform-state-bucket-taona
+#         dot_env: ${{ secrets.DOT_ENV }}
+#         ghv_env: ${{ vars.VARS }}
+#         app_port: 3000
+#         additional_tags: "{\"key1\": \"value1\",\"key2\": \"value2\"}"
+# # fffgggg
