@@ -23,7 +23,7 @@ jobs:
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
         aws_default_region: eu-west-1
         dot_env: ${{ secrets.DOT_ENV }}
-        app_port: 300011
+        app_port: 300
 #   stack_destroy: true
 #     # If you wish to delete the auto-generated bucket
 #     tf_state_bucket_destroy: true
