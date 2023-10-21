@@ -17,7 +17,7 @@ jobs:
     steps:
     - id: deploy
       name: Deploy
-      uses: madawotee/https://github.com/MadawoTee/testactions.git@v0.5.8
+      uses: MadawoTee/testactions@main
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID}}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
